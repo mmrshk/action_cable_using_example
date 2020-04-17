@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Matrix input</h1>
+
+  <div class="well well-lg">
+    <%= form_with(url: "/messages", method: "post") do %>
+      <table>
+        <td>
+          <%= number_field_tag(:first_field_11) %>
+          <%= number_field_tag(:first_field_12) %>
+          <br>
+          <%= number_field_tag(:first_field_21) %>
+          <%= number_field_tag(:first_field_22) %>
+        </td>
+        <td>
+          <div class="">
+            *
+          </div>
+        </td>
+        <td>
+          <%= number_field_tag(:second_field_11) %>
+          <%= number_field_tag(:second_field_12) %>
+          <%= number_field_tag(:second_field_13) %>
+          <br>
+          <%= number_field_tag(:second_field_21) %>
+          <%= number_field_tag(:second_field_22) %>
+          <%= number_field_tag(:second_field_23) %>
+        </td>
+      </table>
+      <br>
+      <%= submit_tag("Calulate", class: "btn btn-info") %>
+    <% end %>
+    <br>
+
+    <div id="msg">
+    </div>
+  </div>
+</div>
