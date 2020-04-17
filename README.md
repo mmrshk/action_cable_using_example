@@ -1,8 +1,7 @@
 # How start to work with this repo?
 
 1. Need to have ruby 2.6.3 on your machine
-2. rake db:create && db:migrate
-3. rails server
+2. rails server
 
 To see how websockets work:
 1. Open new tab in your web browser on port: http://localhost:3000/
