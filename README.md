@@ -1,4 +1,11 @@
-# README
+# How start to work with this repo?
 
-ruby "2.6.3"
-rails 6.0.0.rc1
+1. Need to have ruby 2.6.3 on your machine
+2. rake db:create && db:migrate
+3. rails server
+
+To see how websockets work:
+1. Open new tab in your web browser on port: http://localhost:3000/
+2. Open inkognito browser on the same port
+3. Add matrix to calculate
+4. You will see result in both windows
