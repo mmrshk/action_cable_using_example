@@ -1,5 +1,3 @@
 class LandingController < ApplicationController
-  def index
-    @message = Message.new
-  end
+  def index; end
 end
