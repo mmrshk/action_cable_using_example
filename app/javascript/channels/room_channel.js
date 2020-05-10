@@ -12,28 +12,24 @@ consumer.subscriptions.create("RoomChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
-    $('#msg').append(
-      `<h1>Matrix result</h1>
-      <br>
-      <div class="message">
-      <table class="table table-hover">
-        <tbody>
-          <tr>
-            <th>`  + data.content[0][0] + `</th>
-            <td>`  + data.content[0][1] + `</td>
-            <td>`  + data.content[0][2] + `</td>
-          </tr>
-          <tr>
-            <th>`  + data.content[1][0] + `</th>
-            <td>`  + data.content[1][1] + `</td>
-            <td>`  + data.content[1][2] + `</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>`
-    )
-    console.log("Recieving:")
-    console.log(data.content)
+    let container = document.getElementById('msg');
+    let table = document.createElement('table');
+    table.setAttribute('class', 'tableClass table table-hover');
+
+    container.appendChild(table);
+
+    data.content.forEach((rowData, index) => {
+      const dataRow = document.createElement('tr');
+      dataRow.setAttribute('class', `row-${index}`);
+      rowData.forEach(innerData => {
+        const innerDataContainer = document.createElement('td');
+        innerDataContainer.innerText = innerData;
+        dataRow.appendChild(innerDataContainer);
+      });
+      table.appendChild(dataRow);
+    });
+
+    
   }
 });
 

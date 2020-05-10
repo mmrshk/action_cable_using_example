@@ -13,8 +13,6 @@ class MessagesController < ApplicationController
   private
 
   def params_multiplication
-    params.permit(:authenticity_token, :commit, :first_field_11, :first_field_12, :first_field_21, :first_field_22,
-                  :second_field_11, :second_field_12, :second_field_21, :second_field_22, :second_field_13,
-                  :second_field_23)
+    params.permit(:authenticity_token, :commit, :left_matrix, :right_matrix)
   end
 end

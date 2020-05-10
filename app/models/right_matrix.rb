@@ -1,0 +1,2 @@
+class RightMatrix < ApplicationRecord
+end

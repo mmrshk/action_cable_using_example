@@ -5,11 +5,7 @@
     <%= form_with(url: "/messages", method: "post") do %>
       <table>
         <td>
-          <%= number_field_tag(:first_field_11) %>
-          <%= number_field_tag(:first_field_12) %>
-          <br>
-          <%= number_field_tag(:first_field_21) %>
-          <%= number_field_tag(:first_field_22) %>
+          <%= select_tag("left_matrix", options_from_collection_for_select(@left_matrices, "id", "matrix_type")) %>
         </td>
         <td>
           <div class="">
@@ -17,13 +13,7 @@
           </div>
         </td>
         <td>
-          <%= number_field_tag(:second_field_11) %>
-          <%= number_field_tag(:second_field_12) %>
-          <%= number_field_tag(:second_field_13) %>
-          <br>
-          <%= number_field_tag(:second_field_21) %>
-          <%= number_field_tag(:second_field_22) %>
-          <%= number_field_tag(:second_field_23) %>
+          <%= select_tag("right_matrix", options_from_collection_for_select(@right_matrices, "id", "matrix_type")) %>
         </td>
       </table>
       <br>

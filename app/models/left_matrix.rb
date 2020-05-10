@@ -1,0 +1,2 @@
+class LeftMatrix < ApplicationRecord
+end
